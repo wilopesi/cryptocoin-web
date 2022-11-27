@@ -1,0 +1,61 @@
+*{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.imgIcon{
+    width:23px;
+}
+
+.imgNavbar{
+    width:43px;
+}
+
+.small-text{
+    font-size:14px;
+    color:#383535;
+}
+
+.priceNegative{
+    color: #dc3545;
+}
+
+.pricePositive{
+    color: #28a745;
+}
+
+.element{
+    margin-top:30px;
+}
+
+.titleGrant{
+    text-decoration:none;
+    color:rgb(252,213,53);
+    font-weight: bold;
+    transition: 2s;
+}
+
+.navbarElement{
+    text-decoration:none;
+    color: #383535;
+    font-weight: bold;
+    transition: 2s;
+}
+
+.navbarElement:hover{
+    color:rgb(252,213,53);
+}
+
+.titleNavbar{
+    font-weight:bold;
+    color:rgb(51, 51, 99)
+}
+
+
+.textCard{
+    background-color: #f6f6f6;
+    padding:15px;
+    border-radius:10px;
+}
