@@ -30,6 +30,15 @@
     margin-top:30px;
 }
 
+.formcrud{
+    margin-top:50px;
+}
+
+.alignbutton{
+    margin-left:320px;
+    padding-left: 24px;
+}
+
 .titleGrant{
     text-decoration:none;
     color:rgb(252,213,53);

@@ -11,6 +11,8 @@ import Coin from "./pages/Coin";
 import Search from "./pages/Search";
 import News from "./pages/News";
 import Bitcoin from "./pages/Bitcoin";
+import CRUDCoin from "./pages/CRUDCoin";
+import PeopleCoin from "./pages/PeopleCoin";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -22,6 +24,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path="news" element={<News/>}/>
               <Route path="search" element={<Search/>} />
               <Route path="bitcoin" element= {<Bitcoin/>} />
+              <Route path="crudcoin" element= {<CRUDCoin/>} />
+              <Route path="peoplecoin" element= {<PeopleCoin/>} />
           </Route>
       </Routes>
     </BrowserRouter>
