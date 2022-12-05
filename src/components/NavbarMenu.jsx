@@ -24,7 +24,7 @@ const NavbarMenu = () => {
             <Nav.Link className='navbarElement' href="/Coin">Mercado</Nav.Link>
             <Nav.Link className='navbarElement' href="/Bitcoin">Trades</Nav.Link>
             <Nav.Link className='navbarElement' href="/News">Noticias</Nav.Link>
-            <Nav.Link className='navbarElement' href="/PeopleCoin">Minhas Moedas</Nav.Link>
+            <Nav.Link className='navbarElement' href="/PeopleCoin">Comunidade</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

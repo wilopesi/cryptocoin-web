@@ -1,21 +1,39 @@
-import { useState, useEffect } from "react";
-import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+const urlBase = import.meta.env.VITE_API_URL_BASE;
 
-const createURL = import.meta.env.VITE_API_CREATE;
+const notifySuccess = (message) => toast.success(message);
+const notifyError = (message) => toast.error(message);
 
-function getCEP(){
-    const urlAPICEP = 'https://viacep.com.br/ws/'+cep+'/json/';
- 
-   fetch(urlAPICEP)
-   .then((response) => response.json())
-   .then((json) => {
-     setCEP(json)
- 
-     console.log(json)
-   })
- }
+function createCoin(parameters) {
+
+    var config = {
+        method: 'post',
+        url: urlBase,
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        data: parameters
+    };
+
+    axios(config)
+        .then(function (response) {
+            console.log(JSON.stringify(response.data));
+            notifySuccess("Moeda cadastrada com sucesso!");
+
+            setTimeout(function(){
+                window.open("./PeopleCoin", "_self");
+            }, 5000);
+            
+        })
+        .catch(function (error) {
+            console.log(error);
+            notifyError("Erro ao cadastrar a moeda!");
+        });
+}
 
 function formatterJSON() {
 
@@ -27,32 +45,27 @@ function formatterJSON() {
     let imageLink = document.getElementById("logoCrypto").value;
 
     if (name == "") {
-        alert("O campo Nome Criptomoeda é obrigatorio!")
+        notifyError("O campo Nome Criptomoeda é obrigatorio!")
         validate = false;
     }
-    else if(imageLink == "")
-    {
-        alert("O campo URL da Logo é obrigatorio!")
+    else if (imageLink == "") {
+        notifyError("O campo URL da Logo é obrigatorio!")
         validate = false;
     }
-    else if(symbol == "")
-    {
-        alert("O campo Símbolo Criptomoeda é obrigatorio!")
+    else if (symbol == "") {
+        notifyError("O campo Símbolo Criptomoeda é obrigatorio!")
         validate = false;
     }
-    else if(current_Price == "")
-    {
-        alert("O campo Preço é obrigatorio!")
+    else if (current_Price == "") {
+        notifyError("O campo Preço é obrigatorio!")
         validate = false;
     }
-    else if(market_Cap == "")
-    {
-        alert("O campo Capitalização de Mercado é obrigatorio!");
+    else if (market_Cap == "") {
+        notifyError("O campo Capitalização de Mercado é obrigatorio!");
         validate = false;
     }
 
     if (validate) {
-
         var parameters =
         {
             name: name,
@@ -61,12 +74,8 @@ function formatterJSON() {
             market_Cap: market_Cap,
             imageLink: imageLink
         }
-
-        console.log(parameters);
-
-        window.open("/PeopleCoin", "_self");
+        createCoin(parameters);
     }
-
 }
 
 const CRUDCoin = () => {
@@ -74,6 +83,7 @@ const CRUDCoin = () => {
     return (
         <>
             <div className="container">
+                <ToastContainer />
                 <h2 className="element">Chegou a sua hora de criar uma Criptomoeda!</h2>
                 <div className="col-md-12 formcrud">
                     <div className="row">

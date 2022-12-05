@@ -76,15 +76,14 @@ const Coin = () => {
             </div>
 
             <div className="container element">
-                <hr/>
                 <div className="element">
                     <h6 className="navbarElement">Que tal criar sua própria Criptomoeda?</h6>
-                    <div className="textCard" style={{ width: '900px', textAlign: 'justify' }}>
-                        <span>
-                            Já imaginou ter uma criptomoeda com o seu próprio nome? Próprio rosto? A CriptoCoin criou um jeitinho para isso!<br/>
-                            Criamos uma API que consiga inserir a sua nova moeda em um mundo digital! 
+                    <div className="textCard" style={{ width: '650px', textAlign: 'justify' }}>
+                        <span >
+                            Já imaginou  criar a sua própria criptomoeda? A CriptoCoin criou um jeitinho para isso!
                         </span>
-                    </div>
+                    </div> 
+                    <br/>
                 </div>
                 <a href="/CRUDCoin"><button type="button" class="btn btn-primary">Crie sua criptomoeda</button></a>
             </div>

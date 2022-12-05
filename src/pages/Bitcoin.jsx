@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
-import Card from 'react-bootstrap/Card';
+
 
 
 const coinURL = import.meta.env.VITE_API_LAST_BITCOIN;

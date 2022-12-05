@@ -1,7 +1,6 @@
 
 import { Outlet } from 'react-router-dom'
 import NavbarMenu from './components/NavbarMenu'
-import './App.css'
 
 function App() {
   return (
